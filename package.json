@@ -4,7 +4,8 @@
   "description": "A joke dating site project",
   "main": "server.js",
   "dependencies": {
-    "jquery" : "latest"
+    "express": "latest",
+    "jquery": "latest"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
