@@ -1,9 +1,12 @@
-var $ = require('jquery');
-var http = require('http');
-var fs = require('fs');
+var express = require('express');
 
-http.createServer(function (req, res) {
-    fs.readFile('index.html', function(err, data) {
-       res.write(data);       
-    });
-}).listen(1337);
+var app = express();
+
+app.use(express.static(__dirname));
+
+app.get('', function(req, res) {
+    res.render('index.html');
+})
+
+app.listen(1337);
+console.log("Server listening on port 1337")
